@@ -1,0 +1,31 @@
+{
+  "name": "jansahayak",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JanSahayak — Bhopal, Madhya Pradesh property mutation pre-flight prototype. Helps citizens navigate NAGAR PALIKA document requirements. Synthetic data only.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,green \"vite --host 0.0.0.0\" \"node --env-file=.env --watch server/index.js\"",
+    "build": "vite build",
+    "start": "node --env-file=.env server/index.js",
+    "test": "node --test test/engine.test.js",
+    "check": "npm run test && npm run build",
+    "voice": "node --env-file=.env scripts/render-voice.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pdfkit": "^0.17.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "playwright": "^1.63.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "vite": "^7.1.10"
+  }
+}

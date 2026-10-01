@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push: { branches: ["**"] }
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+
+      # The gate that matters. The golden corpus pins every persona to an exact
+      # set of defect codes, and the injected-defect corpus breaks one thing at a
+      # time and asserts that exactly the expected code fires. A rule change that
+      # alters any verdict fails here and has to be looked at by a human.
+      - name: Compliance engine golden tests
+        run: npm test
+
+      - name: Build client
+        run: npm run build
+
+      - name: Boot the server and walk the whole journey
+        run: node scripts/smoke.mjs

@@ -1,0 +1,20 @@
+{
+  "name": "JanSahayak — property mutation without a middleman",
+  "short_name": "JanSahayak",
+  "description": "Check your property mutation documents before you reach the Nagar Palika counter. Bhopal, Madhya Pradesh. Independent prototype with synthetic data only.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f2ea",
+  "theme_color": "#1a1060",
+  "lang": "hi-IN",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

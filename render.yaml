@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: jansahayak
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Optional. With no key set the journey still completes end to end via the
+      # manual field-confirmation path, and the app says which path it used.
+      - key: OPENAI_API_KEY
+        sync: false

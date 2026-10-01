@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="JanSahayak">
+  <!-- Two paths, same start, same finish. One goes the long way round; one goes
+       straight through. "JanSahayak" means straight. -->
+  <rect width="128" height="128" rx="30" fill="#0d3b34"/>
+  <path d="M28 82C38 34 82 34 96 74" fill="none" stroke="#7f9b86" stroke-width="8"
+        stroke-linecap="round" stroke-dasharray="10 13"/>
+  <path d="M28 82h58" fill="none" stroke="#c9e755" stroke-width="12" stroke-linecap="round"/>
+  <path d="m74 67 17 15-17 15" fill="none" stroke="#c9e755" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
